@@ -1,8 +1,8 @@
 /* Copyright (c) 2020 MTHS All rights reserved
  *
- * Created by: Mr. Coxall
- * Created on: Sep 2020
- * This program ...
+ * Created by: liya G
+ * Created on: Nov 2023
+ * This program moves the servo back and forth.
 */
 
 basic.showString('Hello, World!')
