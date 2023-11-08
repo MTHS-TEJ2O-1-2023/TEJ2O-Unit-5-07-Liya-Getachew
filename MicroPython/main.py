@@ -1,10 +1,13 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
-This module is a Micro:bit MicroPython program
+Created by: liya 
+Created on: Nov 2023
+This module is a Micro:bit MicroPython program moves the servo back and forth.
 """
 
 from microbit import *
+import robotbit 
 
 
-display.scroll("Hello, World!")
+# variables
+
+
