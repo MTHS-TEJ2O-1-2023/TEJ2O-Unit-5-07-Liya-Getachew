@@ -6,9 +6,9 @@ This module is a Micro:bit MicroPython program moves the servo back and forth.
 
 from microbit import *
 import math
-from math import *
 
 
+# create Servo
 class Servo:
     def __init__(self, pin, freq=50, min_us=600, max_us=2400, angle=180):
         self.min_us = min_us
@@ -37,29 +37,38 @@ class Servo:
         self.write_us(us)
 
 
-# set up
+# setup
 display.clear()
 display.show(Image.HOUSE)
+sleep(1000)
 
-Servo(pin0).write_angle(0)
+
 # loop
 while True:
+    # button a is pressed
     if button_a.is_pressed():
-        Servo(pin0).write_angle(0)
-        display.clear()
+        # make the servo at 0 degrees
+        for angle in range(0, 40, 2):
+            Servo(pin0).write_angle(0)
+
+        # show 0 degrees on screen
         display.scroll("0")
         display.show(Image.SMILE)
 
         # when motor finishes turn
         display.clear()
-        display.show(Image.SMILE)
+        display.show(Image.FABULOUS)
 
+    # button b is pressed
     if button_b.is_pressed():
-        Servo(pin0).write_angle(0)
-        display.clear()
+        # make the servo at 180 degrees
+        for angle in range(0, 40, 2):
+            Servo(pin0).write_angle(0)
+
+        # show 180 degrees on screen
         display.scroll("180")
         display.show(Image.SMILE)
 
         # when motor finishes turn
         display.clear()
-        display.show(Image.SMILE)
+        display.show(Image.FABULOUS)
